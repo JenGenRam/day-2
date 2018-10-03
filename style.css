@@ -1,11 +1,16 @@
-body {
-    background: orchid;
+h1{
+    font-size: 5em
 }
-h1, h2, h3 {
-  color: green;  
+h2{
+    font-family:cursive
 }
-ul {background: yellow
+h3{
+    background:brown
 }
-p {
-    color: orange;
+
+ul {
+    color:orange
+}
+p{
+    background:beige
 }
