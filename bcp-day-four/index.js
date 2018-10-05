@@ -1,19 +1,22 @@
-function handleSubmit(event){
+function handleSubmit(event) {
     var form = event.target;
-    var elements = form.elements
+    var elements = form.elements;
+    var toppings = elements.toppings;
 
-    var guess = elements.guess.value;
+    var grade = elements.grade;
+    console.log("grade, grade.value");
 
-    var result = document.getElementById("result");
+    var selectedToppings = "Olives";
 
-    
-    var correct = 7;
-
-    if(guess < 7) {
-        result.textContent = "Too low"
-    } else if(guess > 7) {
-        result.textContent = "Too high"
-    } else {
-        result.textContent = "You right foo!"
+    for(var i = 0; i < toppings.length; i++) {
+        var topping = toppings [i];
+        if(topping.checked) {
+            selectedToppings = selectedToppings
+                + "" + topping.value;
+        }
     }
-}
+
+    console.log(selectedToppings);
+
+ }
+    
